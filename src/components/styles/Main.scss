@@ -1,0 +1,154 @@
+.main {
+  min-height: 100vh;
+  max-width: 100%;
+  background-color: #1f1f36d2;
+  color: white;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+  &::before {
+    clip-path: polygon(100% 33%, 0% 100%, 100% 100%);
+    background: linear-gradient(
+      45deg,
+      rgba(173, 113, 100, 0.085),
+      rgba(3, 3, 5, 0.126)
+    );
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main__container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.main__content {
+  margin-left: 3.445rem;
+}
+
+.text {
+  line-height: 55px;
+  p {
+    color: rgb(189, 181, 181);
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+}
+
+.icons {
+  display: flex;
+  .icon {
+    margin-top: 1rem;
+    margin-right: 1.4rem;
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+      color: rgb(22, 20, 168);
+    }
+  }
+}
+
+.main__img {
+  clip-path: circle(49% at 75% 49%);
+  cursor: pointer;
+
+  img {
+    background: linear-gradient(45deg, rgb(70, 52, 47), rgb(62, 7, 189));
+  }
+}
+
+.buttons {
+  button {
+    padding: 15px 40px;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    background: linear-gradient(
+      25deg,
+      rgba(1, 60, 210, 0.753),
+      rgb(55, 121, 175)
+    );
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+}
+
+.main__container.active {
+  background: rgba(255, 0, 0, 0.493);
+}
+
+@media (max-width: 1200px) {
+  .text {
+    white-space: nowrap;
+    line-height: 30px;
+    p {
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  .buttons button {
+    padding: 8px 20px;
+  }
+  .icons {
+    margin-right: 1rem;
+    .icon {
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .main__content {
+    margin-left: 0;
+  }
+
+  .main__container {
+    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .main__img img {
+    width: 250px;
+  }
+
+  .text {
+    h1 {
+      font-size: 23px;
+    }
+    p {
+      color: white;
+      font-size: 16px;
+    }
+  }
+
+  .icons {
+    margin-left: 1.5rem;
+    .icon {
+      color: white;
+    }
+  }
+}
