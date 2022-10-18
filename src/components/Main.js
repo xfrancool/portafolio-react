@@ -20,7 +20,7 @@ const Main = () => {
           <div className="text">
             <p>Hola!</p>
             <h1>Soy Franco</h1>
-            <p>Font-end Developer</p>
+            <p>Front-end Developer</p>
 
             <div className="icons">
               <a
